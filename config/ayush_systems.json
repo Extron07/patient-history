@@ -1,0 +1,36 @@
+{
+  "_version": "1.0.0",
+  "description": "Ministry of Ayush OPD Triage Disciplines and Clinical Systems",
+  "systems": {
+    "ayurveda": {
+      "name": "Ayurveda",
+      "hindi_name": "आयुर्वेद",
+      "marathi_name": "आयुर्वेद",
+      "description": "Traditional Indian medicine based on Tridosha theory (Vata, Pitta, Kapha) and Panchakarma therapies."
+    },
+    "yoga_naturopathy": {
+      "name": "Yoga & Naturopathy",
+      "hindi_name": "योग एवं प्राकृतिक चिकित्सा",
+      "marathi_name": "योग आणि निसर्गोपचार",
+      "description": "Drugless system of healing using physical postures, pranayama, and natural elements."
+    },
+    "unani": {
+      "name": "Unani Medicine",
+      "hindi_name": "यूनानी चिकित्सा",
+      "marathi_name": "युनानी औषधोपचार",
+      "description": "Greco-Arabic medicine based on four humours (Dam, Balgham, Safra, Sauda)."
+    },
+    "siddha": {
+      "name": "Siddha",
+      "hindi_name": "सिद्ध",
+      "marathi_name": "सिद्ध",
+      "description": "Ancient traditional healing system originating from South India based on Muppini (Vatham, Pitham, Kapham)."
+    },
+    "homeopathy": {
+      "name": "Homeopathy",
+      "hindi_name": "होम्योपैथी",
+      "marathi_name": "होमिओपॅथी",
+      "description": "Holistic medicine based on the principle of 'Similia Similibus Curentur' (like cures like)."
+    }
+  }
+}
