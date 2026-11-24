@@ -30,11 +30,12 @@ venv.bak/
 
 # Node & Frontend
 node_modules/
-dist/
 dist-ssr/
 *.local
 .npm
 .eslintcache
+!frontend/dist/
+!frontend/dist/**
 
 # Environment & Secrets
 .env
