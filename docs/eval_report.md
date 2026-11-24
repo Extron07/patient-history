@@ -1,6 +1,6 @@
 # AyushIntake Scripted Evaluation Report
 
-**Evaluation Timestamp:** 2026-11-23 19:14:34 UTC  
+**Evaluation Timestamp:** 2026-11-24 01:11:38 UTC  
 **Simulated Patient Cohort:** 22 patients  
 **Languages Tested:** en, hi, mr (English, Hindi, Marathi)
 
@@ -16,7 +16,7 @@
 | **Average Questions Asked** | $\le$ 13 per interview | **2.5** questions | PASS |
 | **Average Interview Time** | Under 10 minutes | **0.0s** (simulated) | PASS |
 | **Speech-Failure Rate** | Tracked | **14.8%** (8 events) | MONITORED |
-| **Per-Turn Scanner Latency** | < 2,000 ms (< 2s) | **0.41 ms** | PASS |
+| **Per-Turn Scanner Latency** | < 2,000 ms (< 2s) | **0.49 ms** | PASS |
 
 ---
 

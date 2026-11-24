@@ -46,6 +46,8 @@ app.include_router(doctor_router, prefix="/api/v1")
 app.include_router(seed_router, prefix="/api/v1")
 app.include_router(voice_router)
 
+from pathlib import Path
+
 # Mount static file routes for thumbnails and report previews
 app.mount("/api/v1/reports/file", StaticFiles(directory=str(settings.UPLOAD_DIR)), name="uploaded_files")
 
@@ -58,3 +60,8 @@ async def health_check():
         "disclaimer": "Draft prepared from patient answers. Not a diagnosis.",
         "crisis_helpline": settings.CRISIS_HELPLINE_NUMBER
     }
+
+# Mount built frontend SPA if dist exists (enables single-service all-in-one free deployment)
+frontend_dist = Path(__file__).resolve().parent.parent.parent / "frontend" / "dist"
+if frontend_dist.exists():
+    app.mount("/", StaticFiles(directory=str(frontend_dist), html=True), name="frontend")

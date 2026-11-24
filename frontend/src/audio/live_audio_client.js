@@ -88,9 +88,9 @@ export class LiveAudioClient {
     this.onSpeechEnd = onSpeechEnd;
     this.onLiveFallback = onLiveFallback;
 
-    const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-    const host = window.location.host;
-    const wsUrl = `${protocol}//${host}/ws/voice/${encodeURIComponent(sessionId)}`;
+    const defaultWsHost = `${window.location.protocol === 'https:' ? 'wss:' : 'ws:'}//${window.location.host}`;
+    const wsBase = ((typeof import.meta !== 'undefined' && import.meta.env?.VITE_WS_URL) ? import.meta.env.VITE_WS_URL : defaultWsHost).replace(/\/$/, '');
+    const wsUrl = `${wsBase}/ws/voice/${encodeURIComponent(sessionId)}`;
 
     try {
       this.ws = new WebSocket(wsUrl);
